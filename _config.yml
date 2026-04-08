@@ -66,6 +66,9 @@ clinic:
     - Fistula
     - Pilonidal Sinus
 
+# SEO — paste Google Search Console HTML-tag verification code here (just the content= value)
+# google_site_verification: "paste_your_gsc_verification_code_here"
+
 exclude:
   - scripts/
   - README.md
