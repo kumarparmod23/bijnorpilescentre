@@ -1,0 +1,30 @@
+---
+layout: default
+title: Bijnor Piles Centre — Expert Treatment for Piles, Fissure, Fistula & Pilonidal Sinus
+description: Painless treatment for piles, fissure, fistula and pilonidal sinus by Kshar Sutra, Kshar Karma & Rubber Band Ligation in Bijnor, UP.
+---
+
+<h2>Welcome to Bijnor Piles Centre</h2>
+<p>We specialise in <strong>painless, scientific treatment</strong> for
+Piles, Fissure, Fistula and Pilonidal Sinus using
+<em>Kshar Sutra</em>, <em>Kshar Karma</em> and
+<em>Rubber Band Ligation</em>. Our blog publishes new patient-friendly
+articles in English and Hindi every single day.</p>
+
+<h2>Latest English Posts</h2>
+<ul>
+  {% assign en_posts = site.posts | where: "lang", "en" | slice: 0, 10 %}
+  {% for post in en_posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a> <small>({{ post.date | date: "%d %b %Y" }})</small></li>
+  {% endfor %}
+</ul>
+
+<h2>नवीनतम हिन्दी लेख</h2>
+<ul>
+  {% assign hi_posts = site.posts | where: "lang", "hi" | slice: 0, 10 %}
+  {% for post in hi_posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a> <small>({{ post.date | date: "%d %b %Y" }})</small></li>
+  {% endfor %}
+</ul>
+
+{% include cta.html %}
