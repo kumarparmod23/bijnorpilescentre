@@ -1,0 +1,47 @@
+name: Daily Auto Blog
+
+on:
+  schedule:
+    - cron: '30 0 * * *'   # 00:30 UTC = 06:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Generate today's blogs (EN + HI)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_blogs.py
+
+      - name: Commit & push new posts
+        run: |
+          git config user.name  "auto-blogger"
+          git config user.email "bot@bijnorpilescentre.com"
+          git add _posts/
+          git diff --cached --quiet && echo "No new posts" && exit 0
+          git commit -m "Auto-publish $(date -u +%F)"
+          git push
+
+      - name: Wait for GitHub Pages build
+        run: sleep 90
+
+      - name: Submit URLs to Google + Bing
+        env:
+          GOOGLE_INDEXING_JSON: ${{ secrets.GOOGLE_INDEXING_JSON }}
+          INDEXNOW_KEY:         ${{ secrets.INDEXNOW_KEY }}
+        run: python scripts/submit_to_google.py
