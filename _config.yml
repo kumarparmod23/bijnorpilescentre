@@ -1,0 +1,66 @@
+title: Bijnor Piles Centre
+description: >-
+  Expert treatment for Piles, Fissure, Fistula and Pilonidal Sinus by
+  Kshar Sutra, Kshar Karma and Rubber Band Ligation in Bijnor, UP, India.
+url: "https://bijnorpilescentre.com"
+baseurl: ""
+author:
+  name: Dr. [Your Name]
+  email: kumarparmod.23397@gmail.com
+  bio: Proctologist | Bijnor Piles Centre, Bijnor, UP
+
+lang: en
+locale: en_IN
+timezone: Asia/Kolkata
+
+permalink: /:categories/:title/
+paginate: 10
+paginate_path: "/page:num/"
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+defaults:
+  - scope:
+      path: "_posts/en"
+      type: posts
+    values:
+      lang: en
+      layout: post
+      categories: [en]
+  - scope:
+      path: "_posts/hi"
+      type: posts
+    values:
+      lang: hi
+      layout: post
+      categories: [hi]
+
+clinic:
+  name: Bijnor Piles Centre
+  city: Bijnor
+  state: Uttar Pradesh
+  country: India
+  phone: "+91-XXXXXXXXXX"
+  whatsapp: "+91-XXXXXXXXXX"
+  treatments:
+    - Kshar Sutra
+    - Kshar Karma
+    - Rubber Band Ligation
+  conditions:
+    - Piles
+    - Fissure
+    - Fistula
+    - Pilonidal Sinus
+
+exclude:
+  - scripts/
+  - README.md
+  - requirements.txt
+  - .github/
