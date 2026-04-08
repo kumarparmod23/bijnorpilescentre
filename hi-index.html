@@ -7,7 +7,10 @@ description: बवासीर, फिशर, फिस्टुला और �
 
 <section class="bg-gradient-to-br from-primary to-primary-dark text-white">
   <div class="max-w-6xl mx-auto px-4 py-14 md:py-16">
-    <nav class="text-xs opacity-80 mb-3"><a href="/" class="hover:text-accent">Home</a> / <a href="/blog/" class="hover:text-accent">Blog</a> / हिन्दी</nav>
+    <nav class="text-xs opacity-80 mb-3">
+      <a href="{{ '/' | relative_url }}" class="hover:text-accent">Home</a> /
+      <a href="{{ '/blog/' | relative_url }}" class="hover:text-accent">Blog</a> / हिन्दी
+    </nav>
     <h1 class="font-serif text-4xl md:text-5xl font-bold mb-3">हिन्दी लेख</h1>
     <p class="opacity-90 max-w-2xl">बवासीर, फिशर, फिस्टुला और पाइलोनाइडल साइनस — डॉक्टर द्वारा लिखे गए विश्वसनीय लेख।</p>
   </div>
@@ -18,7 +21,7 @@ description: बवासीर, फिशर, फिस्टुला और �
     <div class="grid md:grid-cols-3 gap-6">
       {% assign hi_posts = site.posts | where: "lang", "hi" %}
       {% for post in hi_posts %}
-      <a href="{{ post.url }}" class="group bg-white rounded-xl p-6 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all block">
+      <a href="{{ post.url | relative_url }}" class="group bg-white rounded-xl p-6 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all block">
         <div class="flex items-center gap-2 mb-3">
           <span class="text-xs text-accent font-semibold uppercase tracking-wide">{{ post.condition }}</span>
           <span class="text-xs text-slate-400">·</span>
@@ -26,9 +29,11 @@ description: बवासीर, फिशर, फिस्टुला और �
         </div>
         <h3 class="font-serif text-lg font-bold text-primary leading-snug mb-3 group-hover:text-accent transition">{{ post.title }}</h3>
         <p class="text-sm text-slate-600 leading-relaxed mb-3">{{ post.meta_description | default: post.excerpt | strip_html | truncate: 120 }}</p>
-        <div class="text-primary text-sm font-semibold">और पढ़ें →</div>
+        <div class="text-primary text-sm font-semibold group-hover:text-accent transition">और पढ़ें →</div>
       </a>
       {% endfor %}
     </div>
   </div>
 </section>
+
+{% include cta.html %}
