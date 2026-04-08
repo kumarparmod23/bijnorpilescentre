@@ -9,14 +9,15 @@ description: Patient-friendly articles on piles, fissure, fistula and pilonidal 
   <div class="max-w-6xl mx-auto px-4 py-16 md:py-20 text-center">
     <div class="text-accent font-semibold text-xs uppercase tracking-widest mb-3">Health Education</div>
     <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4">Our Blog</h1>
-    <p class="text-lg opacity-90 max-w-2xl mx-auto">Trusted, doctor-written articles on piles, fissure, fistula, pilonidal sinus, diet & lifestyle — in English and हिन्दी.</p>
-    <div class="inline-flex mt-8 bg-white/10 border border-white/20 rounded-full p-1 backdrop-blur">
+    <p class="text-lg opacity-90 max-w-2xl mx-auto">Trusted, doctor-written articles on piles, fissure, fistula, pilonidal sinus, diet &amp; lifestyle — in English and हिन्दी.</p>
+    <div class="inline-flex mt-8 bg-white/10 border border-white/20 rounded-full p-1 backdrop-blur gap-1">
       <a href="#english" class="px-6 py-2 rounded-full bg-white text-primary text-sm font-semibold">English</a>
       <a href="#hindi" class="px-6 py-2 rounded-full text-white text-sm font-semibold hover:bg-white/10 transition">हिन्दी</a>
     </div>
   </div>
 </section>
 
+<!-- English Articles -->
 <section id="english" class="py-16 md:py-20">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
@@ -24,12 +25,12 @@ description: Patient-friendly articles on piles, fissure, fistula and pilonidal 
         <div class="text-accent font-semibold text-xs uppercase tracking-widest mb-2">English Articles</div>
         <h2 class="font-serif text-3xl md:text-4xl font-bold text-primary">Read in English</h2>
       </div>
-      <a href="/en/" class="text-primary font-semibold hover:text-accent transition">View all →</a>
+      <a href="{{ '/en/' | relative_url }}" class="text-primary font-semibold hover:text-accent transition">View all →</a>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
       {% assign en_posts = site.posts | where: "lang", "en" | slice: 0, 9 %}
       {% for post in en_posts %}
-      <a href="{{ post.url }}" class="group bg-white rounded-xl p-6 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all block">
+      <a href="{{ post.url | relative_url }}" class="group bg-white rounded-xl p-6 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all block">
         <div class="flex items-center gap-2 mb-3">
           <span class="text-xs text-accent font-semibold uppercase tracking-wide">{{ post.condition }}</span>
           <span class="text-xs text-slate-400">·</span>
@@ -37,13 +38,17 @@ description: Patient-friendly articles on piles, fissure, fistula and pilonidal 
         </div>
         <h3 class="font-serif text-lg font-bold text-primary leading-snug mb-3 group-hover:text-accent transition">{{ post.title }}</h3>
         <p class="text-sm text-slate-600 leading-relaxed mb-3">{{ post.meta_description | default: post.excerpt | strip_html | truncate: 110 }}</p>
-        <div class="text-primary text-sm font-semibold">Read more →</div>
+        <div class="text-primary text-sm font-semibold group-hover:text-accent transition">Read more →</div>
       </a>
       {% endfor %}
+    </div>
+    <div class="text-center mt-10">
+      <a href="{{ '/en/' | relative_url }}" class="inline-flex items-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white px-7 py-3 rounded-lg font-semibold transition">All English Articles →</a>
     </div>
   </div>
 </section>
 
+<!-- Hindi Articles -->
 <section id="hindi" class="bg-cream py-16 md:py-20 border-y border-slate-100">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
@@ -51,12 +56,12 @@ description: Patient-friendly articles on piles, fissure, fistula and pilonidal 
         <div class="text-accent font-semibold text-xs uppercase tracking-widest mb-2">हिन्दी लेख</div>
         <h2 class="font-serif text-3xl md:text-4xl font-bold text-primary">हिन्दी में पढ़ें</h2>
       </div>
-      <a href="/hi/" class="text-primary font-semibold hover:text-accent transition">सभी देखें →</a>
+      <a href="{{ '/hi/' | relative_url }}" class="text-primary font-semibold hover:text-accent transition">सभी देखें →</a>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
       {% assign hi_posts = site.posts | where: "lang", "hi" | slice: 0, 9 %}
       {% for post in hi_posts %}
-      <a href="{{ post.url }}" class="group bg-white rounded-xl p-6 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all block">
+      <a href="{{ post.url | relative_url }}" class="group bg-white rounded-xl p-6 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all block">
         <div class="flex items-center gap-2 mb-3">
           <span class="text-xs text-accent font-semibold uppercase tracking-wide">{{ post.condition }}</span>
           <span class="text-xs text-slate-400">·</span>
@@ -64,11 +69,14 @@ description: Patient-friendly articles on piles, fissure, fistula and pilonidal 
         </div>
         <h3 class="font-serif text-lg font-bold text-primary leading-snug mb-3 group-hover:text-accent transition">{{ post.title }}</h3>
         <p class="text-sm text-slate-600 leading-relaxed mb-3">{{ post.meta_description | default: post.excerpt | strip_html | truncate: 110 }}</p>
-        <div class="text-primary text-sm font-semibold">और पढ़ें →</div>
+        <div class="text-primary text-sm font-semibold group-hover:text-accent transition">और पढ़ें →</div>
       </a>
       {% endfor %}
+    </div>
+    <div class="text-center mt-10">
+      <a href="{{ '/hi/' | relative_url }}" class="inline-flex items-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white px-7 py-3 rounded-lg font-semibold transition">सभी हिन्दी लेख →</a>
     </div>
   </div>
 </section>
 
-<div class="max-w-6xl mx-auto px-4">{% include cta.html %}</div>
+{% include cta.html %}
