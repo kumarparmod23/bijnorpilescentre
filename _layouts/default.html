@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  {% seo %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | relative_url }}">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:780px;margin:auto;padding:1rem;color:#222;line-height:1.65}
+    header,footer{border-bottom:1px solid #eee;padding:1rem 0}
+    footer{border-top:1px solid #eee;border-bottom:none;margin-top:3rem;font-size:.9rem;color:#666}
+    h1,h2,h3{color:#0a4d68}
+    a{color:#0a4d68}
+    .cta{background:#0a4d68;color:#fff;padding:1rem 1.5rem;border-radius:.5rem;margin:2rem 0;text-align:center}
+    .cta a{color:#fff;font-weight:bold;text-decoration:underline}
+    nav a{margin-right:1rem}
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="margin:0"><a href="/" style="text-decoration:none">{{ site.title }}</a></h1>
+    <p style="margin:.25rem 0;color:#555">{{ site.description }}</p>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/en/">English Blog</a>
+      <a href="/hi/">हिन्दी ब्लॉग</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </header>
+  <main>{{ content }}</main>
+  {% include disclaimer.html %}
+  <footer>
+    &copy; {{ 'now' | date: "%Y" }} {{ site.clinic.name }} · {{ site.clinic.city }}, {{ site.clinic.state }} ·
+    <a href="/sitemap.xml">Sitemap</a>
+  </footer>
+</body>
+</html>
