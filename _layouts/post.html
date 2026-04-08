@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<article>
+  <h1>{{ page.title }}</h1>
+  <p style="color:#777;font-size:.9rem">
+    {{ page.date | date: "%d %b %Y" }} · {{ site.author.name }} ·
+    {{ page.lang | upcase }}
+  </p>
+
+  {% if page.image %}<img src="{{ page.image }}" alt="{{ page.title }}" style="width:100%;border-radius:.5rem">{% endif %}
+
+  {{ content }}
+
+  {% include cta.html %}
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.meta_description | default: page.excerpt | strip_html | jsonify }},
+  "inLanguage": "{{ page.lang }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Physician",
+    "name": "{{ site.author.name }}",
+    "affiliation": "{{ site.clinic.name }}"
+  },
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "{{ page.condition | default: 'Anorectal Disease' }}"
+  },
+  "publisher": {
+    "@type": "MedicalBusiness",
+    "name": "{{ site.clinic.name }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ site.clinic.city }}",
+      "addressRegion": "{{ site.clinic.state }}",
+      "addressCountry": "{{ site.clinic.country }}"
+    },
+    "telephone": "{{ site.clinic.phone }}"
+  },
+  "mainEntityOfPage": "{{ page.url | absolute_url }}"
+}
+</script>
