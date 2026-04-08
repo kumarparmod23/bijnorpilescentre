@@ -3,9 +3,9 @@ layout: default
 ---
 <article class="max-w-3xl mx-auto px-4 py-10 md:py-14">
   <nav class="text-xs text-slate-500 mb-5" aria-label="Breadcrumb">
-    <a href="/" class="hover:text-primary">Home</a> /
-    <a href="/blog/" class="hover:text-primary">Blog</a> /
-    <a href="/{{ page.lang }}/" class="hover:text-primary">{% if page.lang == 'hi' %}हिन्दी{% else %}English{% endif %}</a>
+    <a href="{{ '/' | relative_url }}" class="hover:text-primary">Home</a> /
+    <a href="{{ '/blog/' | relative_url }}" class="hover:text-primary">Blog</a> /
+    <a href="{{ '/en/' | relative_url }}" class="hover:text-primary">{% if page.lang == 'hi' %}हिन्दी{% else %}English{% endif %}</a>
   </nav>
 
   <div class="mb-6">
@@ -16,7 +16,7 @@ layout: default
   <h1 class="font-serif text-3xl md:text-4xl font-bold text-primary leading-tight mb-4">{{ page.title }}</h1>
 
   <div class="flex items-center gap-3 text-sm text-slate-500 mb-8 pb-6 border-b border-slate-200">
-    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">DR</div>
+    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold text-sm">DR</div>
     <div>
       <div class="font-semibold text-slate-700">{{ site.author.name }}</div>
       <div class="text-xs">{{ page.date | date: "%d %B %Y" }} · {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</div>
@@ -28,19 +28,17 @@ layout: default
   {% include cta.html %}
 
   <div class="mt-10 pt-8 border-t border-slate-200">
-    <div class="text-sm text-slate-500 mb-3">Read more articles</div>
+    <div class="text-sm font-semibold text-slate-600 mb-4">Read more articles</div>
     <div class="grid sm:grid-cols-2 gap-4">
       {% assign related = site.posts | where: "lang", page.lang | where_exp: "p", "p.url != page.url" | slice: 0, 2 %}
       {% for r in related %}
-      <a href="{{ r.url }}" class="block bg-white rounded-lg p-4 border border-slate-100 hover:shadow-md transition">
+      <a href="{{ r.url | relative_url }}" class="block bg-white rounded-lg p-4 border border-slate-100 hover:shadow-md hover:-translate-y-0.5 transition-all">
         <div class="text-xs text-accent font-semibold uppercase mb-1">{{ r.condition }}</div>
         <div class="font-serif font-bold text-primary leading-snug">{{ r.title }}</div>
       </a>
       {% endfor %}
     </div>
   </div>
-
-  {% include disclaimer.html %}
 </article>
 
 <script type="application/ld+json">
@@ -54,7 +52,18 @@ layout: default
   "dateModified": "{{ page.date | date_to_xmlschema }}",
   "author": {"@type": "Physician", "name": "{{ site.author.name }}", "affiliation": "{{ site.clinic.name }}"},
   "about": {"@type": "MedicalCondition", "name": "{{ page.condition | default: 'Anorectal Disease' }}"},
-  "publisher": {"@type": "MedicalBusiness", "name": "{{ site.clinic.name }}", "address": {"@type": "PostalAddress", "addressLocality": "{{ site.clinic.city }}", "addressRegion": "{{ site.clinic.state }}", "addressCountry": "{{ site.clinic.country }}"}, "telephone": "{{ site.clinic.phone }}"},
+  "publisher": {
+    "@type": "MedicalBusiness",
+    "name": "{{ site.clinic.name }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.clinic.address_line1 }}, {{ site.clinic.address_line2 }}",
+      "addressLocality": "{{ site.clinic.city }}",
+      "addressRegion": "{{ site.clinic.state }}",
+      "addressCountry": "IN"
+    },
+    "telephone": "{{ site.clinic.phone }}"
+  },
   "mainEntityOfPage": "{{ page.url | absolute_url }}"
 }
 </script>
