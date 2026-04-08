@@ -10,32 +10,36 @@
     <div>
       <div class="font-semibold mb-3 text-sm uppercase tracking-wide opacity-90">Quick Links</div>
       <ul class="text-sm space-y-2 opacity-80">
-        <li><a href="/" class="hover:opacity-100 hover:text-accent">Home</a></li>
-        <li><a href="/about/" class="hover:opacity-100 hover:text-accent">About</a></li>
-        <li><a href="/blog/" class="hover:opacity-100 hover:text-accent">Blog</a></li>
-        <li><a href="/contact/" class="hover:opacity-100 hover:text-accent">Contact</a></li>
+        <li><a href="{{ '/' | relative_url }}" class="hover:opacity-100 hover:text-accent">Home</a></li>
+        <li><a href="{{ '/about/' | relative_url }}" class="hover:opacity-100 hover:text-accent">About</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}" class="hover:opacity-100 hover:text-accent">Blog</a></li>
+        <li><a href="{{ '/en/' | relative_url }}" class="hover:opacity-100 hover:text-accent">English Articles</a></li>
+        <li><a href="{{ '/hi/' | relative_url }}" class="hover:opacity-100 hover:text-accent">हिन्दी लेख</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" class="hover:opacity-100 hover:text-accent">Contact</a></li>
       </ul>
     </div>
     <div>
       <div class="font-semibold mb-3 text-sm uppercase tracking-wide opacity-90">Treatments</div>
       <ul class="text-sm space-y-2 opacity-80">
-        <li><a href="/en/what-are-piles/" class="hover:opacity-100 hover:text-accent">Piles / Hemorrhoids</a></li>
-        <li><a href="/en/anal-fissure-explained/" class="hover:opacity-100 hover:text-accent">Anal Fissure</a></li>
-        <li><a href="/en/anal-fistula-symptoms/" class="hover:opacity-100 hover:text-accent">Anal Fistula</a></li>
-        <li><a href="/en/pilonidal-sinus-treatment/" class="hover:opacity-100 hover:text-accent">Pilonidal Sinus</a></li>
+        <li><a href="{{ '/en/what-are-piles/' | relative_url }}" class="hover:opacity-100 hover:text-accent">Piles / Hemorrhoids</a></li>
+        <li><a href="{{ '/en/anal-fissure-explained/' | relative_url }}" class="hover:opacity-100 hover:text-accent">Anal Fissure</a></li>
+        <li><a href="{{ '/en/anal-fistula-symptoms/' | relative_url }}" class="hover:opacity-100 hover:text-accent">Anal Fistula</a></li>
+        <li><a href="{{ '/en/pilonidal-sinus-treatment/' | relative_url }}" class="hover:opacity-100 hover:text-accent">Pilonidal Sinus</a></li>
+        <li><a href="{{ '/en/kshar-sutra-therapy/' | relative_url }}" class="hover:opacity-100 hover:text-accent">Kshar Sutra Therapy</a></li>
+        <li><a href="{{ '/en/rubber-band-ligation/' | relative_url }}" class="hover:opacity-100 hover:text-accent">Rubber Band Ligation</a></li>
       </ul>
     </div>
     <div>
       <div class="font-semibold mb-3 text-sm uppercase tracking-wide opacity-90">Contact</div>
       <ul class="text-sm space-y-2 opacity-80">
-        <li>📍 Bijnor, Uttar Pradesh, India</li>
-        <li>📞 <a href="tel:{{ site.clinic.phone }}" class="hover:text-accent">{{ site.clinic.phone }}</a></li>
-        <li>💬 <a href="https://wa.me/{{ site.clinic.whatsapp | remove: '+' | remove: '-' }}" class="hover:text-accent">WhatsApp</a></li>
-        <li>🕒 Mon–Sat, 10 AM – 7 PM</li>
+        <li>📍 {{ site.clinic.address_line1 }},<br>{{ site.clinic.address_line2 }}</li>
+        <li>📞 <a href="tel:{{ site.clinic.phone }}" class="hover:text-accent">{{ site.clinic.phone_display }}</a></li>
+        <li>💬 <a href="https://wa.me/{{ site.clinic.whatsapp }}" class="hover:text-accent">WhatsApp</a></li>
+        <li>🕒 {{ site.clinic.hours }}</li>
       </ul>
     </div>
   </div>
   <div class="border-t border-white/10 py-5 text-center text-xs opacity-60">
-    © {{ 'now' | date: "%Y" }} Bijnor Piles Centre · All rights reserved · <a href="/sitemap.xml" class="hover:text-accent">Sitemap</a>
+    © {{ 'now' | date: "%Y" }} Bijnor Piles Centre · All rights reserved · <a href="{{ '/sitemap.xml' | relative_url }}" class="hover:text-accent">Sitemap</a>
   </div>
 </footer>
