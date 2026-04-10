@@ -2,7 +2,7 @@ name: Daily Auto Blog
 
 on:
   schedule:
-    - cron: '30 0 * * *'   # 00:30 UTC = 06:00 IST
+    - cron: '30 6 * * *'   # 06:30 UTC = 12:00 PM IST
   workflow_dispatch:
 
 permissions:
