@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kumarparmod23.github.io/bijnorpilescentre/sitemap.xml
+Sitemap: https://bijnorpilescentre.com/sitemap.xml
+Sitemap: https://www.bijnorpilescentre.com/sitemap.xml
