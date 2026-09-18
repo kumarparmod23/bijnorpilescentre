@@ -59,7 +59,7 @@ description: Book a consultation at Bijnor Piles Centre — call or WhatsApp +91
         <h2 class="font-serif text-2xl font-bold mb-3">Why Visit Us</h2>
         <ul class="space-y-3 text-sm opacity-95 mb-7">
           <li class="flex gap-3"><span class="text-accent font-bold">✓</span> Free first evaluation</li>
-          <li class="flex gap-3"><span class="text-accent font-bold">✓</span> Painless, day-care procedures</li>
+          <li class="flex gap-3"><span class="text-accent font-bold">✓</span> Minimally invasive, day-care procedures</li>
           <li class="flex gap-3"><span class="text-accent font-bold">✓</span> 100% confidential consultation</li>
           <li class="flex gap-3"><span class="text-accent font-bold">✓</span> Most treatments under 30 minutes</li>
           <li class="flex gap-3"><span class="text-accent font-bold">✓</span> Transparent, affordable pricing</li>
