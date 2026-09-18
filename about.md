@@ -30,13 +30,14 @@ description: About Bijnor Piles Centre — expert proctology in Bijnor, UP, spec
     <li><strong>Kshar Sutra</strong> — gold-standard Ayurvedic medicated thread therapy for fistula and pilonidal sinus</li>
     <li><strong>Kshar Karma</strong> — chemical cauterisation for early piles</li>
     <li><strong>Rubber Band Ligation</strong> — modern 10-minute day-care procedure for internal piles</li>
+    <li><strong>Sclerotherapy</strong> — injection-based treatment option for selected internal piles after clinical evaluation</li>
   </ul>
 
   <h2>Why Patients Choose Us</h2>
   <ul>
     <li>Minimally invasive, day-care procedures — return to work the same day</li>
     <li>Many years of focused proctology experience</li>
-    <li><strong>98% success rate*</strong> with outcomes varying by condition</li>
+    <li><strong>98% treatment success rate*</strong> with outcomes varying by condition</li>
     <li>100% confidential, judgment-free care</li>
     <li>Transparent pricing — no hidden charges</li>
   </ul>
