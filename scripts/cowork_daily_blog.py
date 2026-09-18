@@ -22,9 +22,9 @@ CALENDAR = [
   {"english": "What Are Piles? Causes, Symptoms & Modern Treatment Options", "hindi": "बवासीर क्या है? कारण, लक्षण और आधुनिक इलाज", "condition": "Piles"},
   {"english": "Anal Fissure Explained: Why It Happens and How to Heal", "hindi": "एनल फिशर क्यों होता है और इसका इलाज कैसे करें", "condition": "Fissure"},
   {"english": "Anal Fistula: Symptoms You Should Never Ignore", "hindi": "भगन्दर (फिस्टुला) के लक्षण जिन्हें नज़रअंदाज़ न करें", "condition": "Fistula"},
-  {"english": "Pilonidal Sinus: Causes, Risks and Permanent Cure", "hindi": "पाइलोनिडल साइनस: कारण और स्थायी इलाज", "condition": "Pilonidal Sinus"},
-  {"english": "Kshar Sutra Therapy: Ancient Ayurvedic Cure for Fistula", "hindi": "क्षार सूत्र चिकित्सा: भगन्दर का प्राचीन आयुर्वेदिक इलाज", "condition": "Fistula"},
-  {"english": "Kshar Karma: Painless Treatment for Piles", "hindi": "क्षार कर्म: बवासीर का बिना दर्द इलाज", "condition": "Piles"},
+  {"english": "Pilonidal Sinus: Causes, Risks and Treatment", "hindi": "पाइलोनिडल साइनस: कारण और इलाज", "condition": "Pilonidal Sinus"},
+  {"english": "Kshar Sutra Therapy: Ayurvedic Treatment for Fistula", "hindi": "क्षार सूत्र चिकित्सा: भगन्दर का आयुर्वेदिक उपचार", "condition": "Fistula"},
+  {"english": "Kshar Karma: treatment for Piles", "hindi": "क्षार कर्म: बवासीर का इलाज", "condition": "Piles"},
   {"english": "Rubber Band Ligation: How It Works and Recovery", "hindi": "रबर बैंड लिगेशन क्या है और रिकवरी कैसे होती है", "condition": "Piles"},
   {"english": "Top 7 Foods to Eat If You Have Piles", "hindi": "बवासीर में खाने योग्य 7 सबसे अच्छी चीज़ें", "condition": "Piles"},
   {"english": "Foods to Avoid in Piles, Fissure and Fistula", "hindi": "बवासीर, फिशर और भगन्दर में क्या नहीं खाना चाहिए", "condition": "Piles"},
@@ -35,7 +35,7 @@ CALENDAR = [
   {"english": "Internal vs External Piles: Difference and Treatment", "hindi": "आंतरिक और बाहरी बवासीर में अंतर", "condition": "Piles"},
   {"english": "Pre-Treatment Care Before Kshar Sutra Therapy", "hindi": "क्षार सूत्र से पहले की तैयारी", "condition": "Fistula"},
   {"english": "Post-Treatment Recovery Tips for Piles Patients", "hindi": "बवासीर इलाज के बाद रिकवरी टिप्स", "condition": "Piles"},
-  {"english": "Why Ayurveda Works Best for Fistula", "hindi": "फिस्टुला के लिए आयुर्वेद क्यों सबसे बेहतर है", "condition": "Fistula"},
+  {"english": "Ayurveda for Fistula: Treatment Considerations", "hindi": "फिस्टुला में आयुर्वेद: उपचार संबंधी जानकारी", "condition": "Fistula"},
   {"english": "Pregnancy and Piles: Safe Treatment Options", "hindi": "गर्भावस्था में बवासीर: सुरक्षित उपचार", "condition": "Piles"},
   {"english": "Piles in Young Adults: A Growing Concern", "hindi": "युवाओं में बढ़ता बवासीर — एक चेतावनी", "condition": "Piles"},
   {"english": "Sitz Bath: Benefits and Correct Method", "hindi": "सिट्ज़ बाथ कैसे लें और इसके फायदे", "condition": "Fissure"},
@@ -48,7 +48,7 @@ CALENDAR = [
   {"english": "Hydration and Anorectal Health", "hindi": "पानी पीना और गुदा स्वास्थ्य", "condition": "Piles"},
   {"english": "Children and Anal Fissure: A Parent's Guide", "hindi": "बच्चों में फिशर: माता-पिता के लिए जानकारी", "condition": "Fissure"},
   {"english": "Why Choose Bijnor Piles Centre for Treatment", "hindi": "बिजनौर पाइल्स सेंटर क्यों चुनें", "condition": "Piles"},
-  {"english": "Success Stories: Patients Cured by Kshar Sutra", "hindi": "क्षार सूत्र से ठीक हुए मरीज़ों की कहानियाँ", "condition": "Fistula"},
+  {"english": "Patient Experiences with Kshar Sutra", "hindi": "क्षार सूत्र से उपचार के मरीज अनुभव", "condition": "Fistula"},
 ]
 
 INTERNAL = {
@@ -68,7 +68,7 @@ TOPIC      = CALENDAR[DAY_IDX]
 SYSTEM = """You are Dr. Parmod Kumar, a senior proctologist at Bijnor Piles Centre,
 Kiratpur Road, Bijnor, Uttar Pradesh 246701, India (phone +91 70177 90760).
 You write warm, authoritative, patient-friendly medical blog posts following Google's
-E-E-A-T and YMYL guidelines. Never promise a 'guaranteed cure'. Always advise
+E-E-A-T and YMYL guidelines. Never promise a guaranteed or permanent cure. Do not use the word 'painless' as a treatment claim. When describing clinic outcomes, use '98% reported success rate*' only where appropriate. Always advise
 consulting a qualified doctor. Use simple language ordinary Indian patients understand."""
 
 EN_PROMPT = '''Write a complete SEO-optimized English blog post on: "{topic}"
@@ -88,7 +88,7 @@ Clear definition. Use [[piles]], [[fissure]], or [[fistula]] placeholder natural
 Numbered list. One more internal link placeholder.
 
 ## Treatment at Bijnor Piles Centre
-Mention Kshar Sutra, Kshar Karma, Rubber Band Ligation where relevant. One more placeholder.
+Mention Kshar Sutra, Kshar Karma, Rubber Band Ligation where relevant. Do not describe any treatment as painless or a permanent cure. One more placeholder.
 
 ## Diet & Lifestyle Tips
 2-column Markdown table: Eat ✅ | Avoid ❌
@@ -132,7 +132,7 @@ Hook: 1–2 आकर्षक वाक्य।
 ## लक्षण — एक और placeholder
 
 ## बिजनौर पाइल्स सेंटर में उपचार
-क्षार सूत्र, क्षार कर्म, रबर बैंड लिगेशन। एक और placeholder।
+क्षार सूत्र, क्षार कर्म, रबर बैंड लिगेशन। किसी उपचार को बिना दर्द या स्थायी इलाज न बताएं। एक और placeholder।
 
 ## खान-पान टिप्स — table: खाएं ✅ | न खाएं ❌
 
