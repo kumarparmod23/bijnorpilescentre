@@ -2,14 +2,14 @@
 layout: default
 title: About — Bijnor Piles Centre
 permalink: /about/
-description: About Bijnor Piles Centre — expert proctology in Bijnor, UP, specialising in painless treatment of piles, fissure, fistula and pilonidal sinus.
+description: About Bijnor Piles Centre — expert proctology in Bijnor, UP, specialising in day-care treatment of piles, fissure, fistula and pilonidal sinus.
 ---
 
 <section class="bg-gradient-to-br from-primary to-primary-dark text-white">
   <div class="max-w-5xl mx-auto px-4 py-14 md:py-20">
     <div class="text-accent font-semibold text-xs uppercase tracking-widest mb-3">About Us</div>
     <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4">Trusted Proctology Care in Bijnor</h1>
-    <p class="text-lg opacity-90 max-w-2xl">A dedicated clinic for the painless, day-care treatment of piles, fissure, fistula and pilonidal sinus — combining classical Ayurveda with modern clinical standards.</p>
+    <p class="text-lg opacity-90 max-w-2xl">A dedicated clinic for day-care treatment of piles, fissure, fistula and pilonidal sinus — combining classical Ayurveda with modern clinical standards.</p>
   </div>
 </section>
 
@@ -28,18 +28,18 @@ description: About Bijnor Piles Centre — expert proctology in Bijnor, UP, spec
   <h2>Treatments Offered</h2>
   <ul>
     <li><strong>Kshar Sutra</strong> — gold-standard Ayurvedic medicated thread therapy for fistula and pilonidal sinus</li>
-    <li><strong>Kshar Karma</strong> — painless chemical cauterisation for early piles</li>
+    <li><strong>Kshar Karma</strong> — chemical cauterisation for early piles</li>
     <li><strong>Rubber Band Ligation</strong> — modern 10-minute day-care procedure for internal piles</li>
   </ul>
 
   <h2>Why Patients Choose Us</h2>
   <ul>
-    <li>Painless, day-care procedures — return to work the same day</li>
-    <li>Years of focused proctology experience</li>
-    <li>High success rate with minimal recurrence</li>
+    <li>Minimally invasive, day-care procedures — return to work the same day</li>
+    <li>Many years of focused proctology experience</li>
+    <li><strong>98% success rate*</strong> with outcomes varying by condition</li>
     <li>100% confidential, judgment-free care</li>
     <li>Transparent pricing — no hidden charges</li>
   </ul>
 </article>
 
-<div class="max-w-3xl mx-auto px-4 pb-14">{% include cta.html %}</div>
+<div class="max-w-3xl mx-auto px-4 pb-14"><p class="text-xs text-slate-500 mb-4">*Reported success rate; individual results vary.</p>{% include cta.html %}</div>
