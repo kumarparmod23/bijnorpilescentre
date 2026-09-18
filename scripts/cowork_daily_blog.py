@@ -88,7 +88,7 @@ Clear definition. Use [[piles]], [[fissure]], or [[fistula]] placeholder natural
 Numbered list. One more internal link placeholder.
 
 ## Treatment at Bijnor Piles Centre
-Mention Kshar Sutra, Kshar Karma, Rubber Band Ligation where relevant. Do not describe any treatment as painless or a permanent cure. One more placeholder.
+Mention Kshar Sutra, Kshar Karma, Rubber Band Ligation and Sclerotherapy where relevant. Do not describe any treatment as painless or a permanent cure. One more placeholder.
 
 ## Diet & Lifestyle Tips
 2-column Markdown table: Eat ✅ | Avoid ❌
@@ -132,7 +132,7 @@ Hook: 1–2 आकर्षक वाक्य।
 ## लक्षण — एक और placeholder
 
 ## बिजनौर पाइल्स सेंटर में उपचार
-क्षार सूत्र, क्षार कर्म, रबर बैंड लिगेशन। किसी उपचार को बिना दर्द या स्थायी इलाज न बताएं। एक और placeholder।
+क्षार सूत्र, क्षार कर्म, रबर बैंड लिगेशन और स्क्लेरोथेरेपी। किसी उपचार को बिना दर्द या स्थायी इलाज न बताएं। एक और placeholder।
 
 ## खान-पान टिप्स — table: खाएं ✅ | न खाएं ❌
 
