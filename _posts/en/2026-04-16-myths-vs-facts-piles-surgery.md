@@ -51,8 +51,8 @@ Don't let myths delay treatment. Persistent bleeding, pain or a lump should be e
 No — treatment depends on grade and type.
 ### Q2. Will I be hospitalised?
 Most modern treatments are out-patient.
-### Q3. Is there a permanent cure?
-Yes — and it is far simpler than people think.
+### Q3. Is there a lasting relief?
+Treatment options depend on the grade and type of piles.
 
 ## Conclusion
 Don't let fear keep you from a comfortable life. The truth about modern piles treatment is reassuring.
