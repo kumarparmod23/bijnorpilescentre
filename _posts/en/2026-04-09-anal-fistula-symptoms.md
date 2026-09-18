@@ -24,9 +24,9 @@ A fistula has two openings — one inside the anal canal and one on the skin nea
 ## Why Surgery Alone Often Fails
 Conventional fistula surgery (fistulotomy) has a high recurrence rate — sometimes up to 30% — and can affect continence.
 
-## Kshar Sutra: The Permanent Cure
+## Kshar Sutra: The Treatment
 **Kshar Sutra** is a medicated thread therapy described in ancient Ayurveda. It is now considered the **gold standard** for fistula treatment globally because:
-- **Permanent cure**, very low recurrence
+- **98% reported success rate***, with individual outcomes varying
 - **Preserves the anal sphincter** — no incontinence
 - **Day-care procedure** — no hospital stay
 - **Walk in, walk out** — return to work in days
