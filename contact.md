@@ -63,6 +63,8 @@ description: Book a consultation at Bijnor Piles Centre — call or WhatsApp +91
           <li class="flex gap-3"><span class="text-accent font-bold">✓</span> 100% confidential consultation</li>
           <li class="flex gap-3"><span class="text-accent font-bold">✓</span> Most treatments under 30 minutes</li>
           <li class="flex gap-3"><span class="text-accent font-bold">✓</span> Transparent, affordable pricing</li>
+          <li class="flex gap-3"><span class="text-accent font-bold">✓</span> Sclerotherapy available where clinically appropriate</li>
+          <li class="flex gap-3"><span class="text-accent font-bold">✓</span> 98% treatment success rate*</li>
           <li class="flex gap-3"><span class="text-accent font-bold">✓</span> Return to work the same day</li>
         </ul>
       </div>
@@ -91,6 +93,8 @@ description: Book a consultation at Bijnor Piles Centre — call or WhatsApp +91
     <p class="text-sm text-slate-500 mt-3 text-center">St. Mary's ke pass, Shree Hospital ke samne, Kiratpur Road, Bijnor</p>
   </div>
 </section>
+
+<p class="max-w-5xl mx-auto px-4 text-xs text-slate-500">*Reported treatment success rate; individual results vary by condition and patient.</p>
 
 <script type="application/ld+json">
 {
